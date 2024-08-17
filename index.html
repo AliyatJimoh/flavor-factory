@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Welcome Page -->
+    <div id="welcome-page" class="page active">
+        <h1>Welcome to the Recipe Game</h1>
+        <input type="text" id="username" placeholder="Enter your name">
+        <select id="meal-category">
+            <option value="" disabled selected>Select a Meal Category</option>
+            <option value="italian">Italian</option>
+            <option value="mexican">Mexican</option>
+            <option value="japanese">Japanese</option>
+            <option value="indian">Indian</option>
+        </select>
+        <button id="start-game-btn">Start Game</button>
+    </div>
+
+    <!-- Game Page -->
+    <div id="game-page" class="page hidden">
+        <div id="game-header">
+            <span id="player-name"></span>
+            <span id="timer"></span>
+        </div>
+        <h2 id="game-title"></h2>
+        <div id="recipes-container" class="recipe-list"></div>
+    </div>
+
+    <!-- Score Page -->
+    <div id="score-page" class="page hidden">
+        <h1>Game Over!</h1>
+        <p id="score"></p>
+        <button id="restart-game-btn">Restart Game</button>
+        <button id="go-home-btn">Go to Home</button>
+    </div>
+
+    <!-- Add Recipe Page -->
+    <div id="add-recipe-page" class="page">
+        <h1>Add a New Recipe</h1>
+        <input type="text" id="new-recipe-name" placeholder="Recipe Name">
+        <input type="text" id="new-recipe-country" placeholder="Country">
+        <button id="add-recipe-btn">Add Recipe</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
